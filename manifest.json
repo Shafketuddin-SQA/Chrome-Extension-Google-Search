@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Google Search Filter",
+  "version": "1.0",
+  "description": "Filter Google search results by year, location, and site type.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

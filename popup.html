@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #f2f2fb;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(133, 131, 131, 0.1);
+            width: 280px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #837f7f;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5e9d65;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4d854d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Custom Google Search Filter</h2>
+        
+        <!-- Search Query Input -->
+        <div>
+            <label for="query">Search Query:</label>
+            <input type="text" id="query" placeholder="Enter search query">
+        </div>
+        
+        <!-- Year Filter -->
+        <div>
+            <label for="year">Year (optional):</label>
+            <select id="year">
+                <option value="">All Years</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <!-- Add more years as needed -->
+            </select>
+        </div>
+        
+        <!-- Location Filter -->
+        <div>
+            <label for="location">Location (optional):</label>
+            <select id="location">
+                <option value="">All Locations</option>
+                <option value="uk">UK</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="india">India</option>
+                <!-- Add more countries as needed -->
+            </select>
+        </div>
+        
+        <!-- Site Type Filter -->
+        <div>
+            <label for="siteType">Site Type (optional):</label>
+            <select id="siteType">
+                <option value="">All Site Types</option>
+                <option value="blog">Blog</option>
+                <option value="news">News</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="forum">Forum</option>
+                <!-- Add more site types as needed -->
+            </select>
+        </div>
+        
+
+        <!-- Search Button -->
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
